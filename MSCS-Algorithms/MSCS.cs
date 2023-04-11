@@ -85,7 +85,7 @@ public class MSCS
             return Math.Max(0, X[L]);
 
         // Defines midpoint of the array
-        int M = (L + U) / 2f;
+        int M = (L + U) / 2;
         // Define current sum and max of left side of the array
         int sum = 0;
         int maxToLeft = 0;
@@ -93,7 +93,7 @@ public class MSCS
         for(int I = M; I >= L; I--)
         {
             // Get the current sum & set maxToLeft
-            sum += X[i];
+            sum += X[I];
             maxToLeft = Math.Max(maxToLeft, sum);
         }
 

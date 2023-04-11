@@ -1,3 +1,16 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System.Collections.Generic;
 
-Console.WriteLine("Hello, Motherfucker!");
+namespace MSCS_Algorithms;
+
+public class Program
+{
+    public static List<List<int>> GenerateRandomArrays()
+    {
+        return new List<List<int>>();
+    }
+
+    public static int[] ReadFile(string path)
+    {
+        return new int[0];
+    }
+}

@@ -1,0 +1,15 @@
+/Users/chasetug/Code/RiderProjects/MSCS Algorithms/Solution1/MSCS-Algorithms/obj/Debug/net7.0/MSCS-Algorithms.csproj.AssemblyReference.cache
+/Users/chasetug/Code/RiderProjects/MSCS Algorithms/Solution1/MSCS-Algorithms/obj/Debug/net7.0/MSCS-Algorithms.GeneratedMSBuildEditorConfig.editorconfig
+/Users/chasetug/Code/RiderProjects/MSCS Algorithms/Solution1/MSCS-Algorithms/obj/Debug/net7.0/MSCS-Algorithms.AssemblyInfoInputs.cache
+/Users/chasetug/Code/RiderProjects/MSCS Algorithms/Solution1/MSCS-Algorithms/obj/Debug/net7.0/MSCS-Algorithms.AssemblyInfo.cs
+/Users/chasetug/Code/RiderProjects/MSCS Algorithms/Solution1/MSCS-Algorithms/obj/Debug/net7.0/MSCS-Algorithms.csproj.CoreCompileInputs.cache
+/Users/chasetug/Code/RiderProjects/MSCS Algorithms/Solution1/MSCS-Algorithms/bin/Debug/net7.0/MSCS-Algorithms
+/Users/chasetug/Code/RiderProjects/MSCS Algorithms/Solution1/MSCS-Algorithms/bin/Debug/net7.0/MSCS-Algorithms.deps.json
+/Users/chasetug/Code/RiderProjects/MSCS Algorithms/Solution1/MSCS-Algorithms/bin/Debug/net7.0/MSCS-Algorithms.runtimeconfig.json
+/Users/chasetug/Code/RiderProjects/MSCS Algorithms/Solution1/MSCS-Algorithms/bin/Debug/net7.0/MSCS-Algorithms.dll
+/Users/chasetug/Code/RiderProjects/MSCS Algorithms/Solution1/MSCS-Algorithms/bin/Debug/net7.0/MSCS-Algorithms.pdb
+/Users/chasetug/Code/RiderProjects/MSCS Algorithms/Solution1/MSCS-Algorithms/obj/Debug/net7.0/MSCS-Algorithms.dll
+/Users/chasetug/Code/RiderProjects/MSCS Algorithms/Solution1/MSCS-Algorithms/obj/Debug/net7.0/refint/MSCS-Algorithms.dll
+/Users/chasetug/Code/RiderProjects/MSCS Algorithms/Solution1/MSCS-Algorithms/obj/Debug/net7.0/MSCS-Algorithms.pdb
+/Users/chasetug/Code/RiderProjects/MSCS Algorithms/Solution1/MSCS-Algorithms/obj/Debug/net7.0/MSCS-Algorithms.genruntimeconfig.cache
+/Users/chasetug/Code/RiderProjects/MSCS Algorithms/Solution1/MSCS-Algorithms/obj/Debug/net7.0/ref/MSCS-Algorithms.dll

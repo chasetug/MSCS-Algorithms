@@ -6,6 +6,9 @@
         <RootNamespace>MSCS_Algorithms</RootNamespace>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <StartupObject></StartupObject>
+        <ApplicationIcon />
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     </PropertyGroup>
 
 </Project>

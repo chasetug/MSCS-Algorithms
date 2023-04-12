@@ -16,6 +16,7 @@ public class Program
         // -> Debug write the second value to ensure that the array pulled successfully
         if (debug) Console.WriteLine(pulledArr[1]);
 
+        // Print out the results for the phw_input.txt
         Console.WriteLine($"Algorithm 1: {MSCS.Algorithm_1(pulledArr)}, " +
                           $"Algorithm 2: {MSCS.Algorithm_2(pulledArr)}, " +
                           $"Algorithm 3: {MSCS.MaxSum(pulledArr, 0, 9)}, " +
@@ -27,7 +28,7 @@ public class Program
             List<int> results = new();
             results.Add(MSCS.Algorithm_1(numbers.ToArray()));
             results.Add(MSCS.Algorithm_2(numbers.ToArray()));
-            results.Add(MSCS.MaxSum(numbers.ToArray(), 0, 9));
+            results.Add(MSCS.MaxSum(numbers.ToArray(), 0, numbers.Count - 1));
             results.Add(MSCS.Algorithm_4(numbers.ToArray()));
             
             Console.WriteLine($"Case {numbers.Count}: " +
@@ -39,20 +40,29 @@ public class Program
         });
     }
 
+    // Creates 20 random lists of integers of size 10, 15, 20, ... 95, 100
     public static List<List<int>> GenerateRandomArrays(int lower, int upper)
     {
+        // Initialize the matrix
         List<List<int>> matrix = new();
+        // Initialize our RNG
         Random random = new(); 
         
+        // Counter for our list sizes
         for(int i = 10; i <= 100; i += 5)
         {
+            // Initialize the row
             List<int> row = new();
+            // Create a new row with i elements
             for (int j = 0; j < i; j++)
             {
+                // Add i random elements to the row
                 row.Add(random.Next(lower, upper));
             }
+            // When done, add the row to the matrix
             matrix.Add(row);
         }
+        // Return our matrix of random numbers
         return matrix;
     }
 

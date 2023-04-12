@@ -22,12 +22,20 @@ public class Program
                           $"Algorithm 4: {MSCS.Algorithm_4(pulledArr)}");
 
         var matrix = GenerateRandomArrays(-100, 100);
-        matrix.ForEach(delegate(List<int> lists)
+        matrix.ForEach(delegate(List<int> numbers)
         {
-            Console.WriteLine($"Algorithm 1: {MSCS.Algorithm_1(lists.ToArray())}, " +
-                              $"Algorithm 2: {MSCS.Algorithm_2(lists.ToArray())}, " +
-                              $"Algorithm 3: {MSCS.MaxSum(lists.ToArray(), 0, 9)}, " +
-                              $"Algorithm 4: {MSCS.Algorithm_4(lists.ToArray())}");
+            List<int> results = new();
+            results.Add(MSCS.Algorithm_1(numbers.ToArray()));
+            results.Add(MSCS.Algorithm_2(numbers.ToArray()));
+            results.Add(MSCS.MaxSum(numbers.ToArray(), 0, 9));
+            results.Add(MSCS.Algorithm_4(numbers.ToArray()));
+            
+            Console.WriteLine($"Case {numbers.Count}: " +
+                              $"Algorithm 1: {results[0]}, " +
+                              $"Algorithm 2: {results[1]}, " +
+                              $"Algorithm 3: {results[2]}, " +
+                              $"Algorithm 4: {results[3]} " +
+                              $"Correct: {results.Distinct().Count() == 1}");
         });
     }
 

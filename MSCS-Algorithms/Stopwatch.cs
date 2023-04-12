@@ -5,7 +5,7 @@ namespace MSCS_Algorithms;
 public class Stopwatch
 {
     // Sets up current time, pushes in current time
-    static DateTime currentTime = DateTime.Now;
+    static DateTime _currentTime;
     
     // Marks the current time
     // -> Outputs the time difference if reset is false
@@ -14,13 +14,13 @@ public class Stopwatch
         // -> If reset is true, set current time and return
         if (reset)
         {
-            currentTime = DateTime.Now;
+            _currentTime = DateTime.Now;
             return;
         }
 
         // Output the time difference
-        Console.Write($"Time: {(DateTime.Now - currentTime).Microseconds}μs | ");
+        Console.Write($"Time: {(DateTime.Now - _currentTime).Microseconds}μs | ");
         // Reset current
-        currentTime = DateTime.Now;
+        _currentTime = DateTime.Now;
     }
 }

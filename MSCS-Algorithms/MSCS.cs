@@ -104,7 +104,7 @@ public class MSCS
         for(int I = M + 1; I <= U; I++)
         {
             // Get current sum & set maxToRight
-            sum += sum + X[I];
+            sum += X[I];
             maxToRight = Math.Max(maxToRight, sum);
         }
 

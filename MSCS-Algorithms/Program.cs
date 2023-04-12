@@ -12,9 +12,14 @@ public class Program
         if (debug) Console.WriteLine("Working Directory: " + Directory.GetCurrentDirectory());
 
         // Pull array from contained file
-        int[] pulledArr = ReadFile(Directory.GetCurrentDirectory() + "\\phw_input.txt");
+        int[] pulledArr = ReadFile(Directory.GetCurrentDirectory() + (OperatingSystem.IsWindows() ? "\\" : "/") + "phw_input.txt");
         // -> Debug write the second value to ensure that the array pulled successfully
         if (debug) Console.WriteLine(pulledArr[1]);
+
+        Console.WriteLine(MSCS.Algorithm_1(pulledArr));
+        Console.WriteLine(MSCS.Algorithm_2(pulledArr));
+        Console.WriteLine(MSCS.MaxSum(pulledArr, 0, 9));
+        Console.WriteLine(MSCS.Algorithm_4(pulledArr));
     }
 
     public static List<List<int>> GenerateRandomArrays(int lower, int upper)
@@ -35,17 +40,16 @@ public class Program
     }
 
     // We will be reading a file named "phw_input.txt"
-    // -> File is comma denoted
+    // -> File is comma delimited
     // -> Will always be of length 10
     public static int[] ReadFile(string path)
     {
         // Open up the file defined by path
-        StreamReader sr = new StreamReader(path);
+        StreamReader sr = new(path);
         // Pull contents and cut spaces
         string fileContents = sr.ReadLine();
-        // -> If there are no contents the return
-        if (fileContents == null)
-            return new int[0];
+        // -> If there are no contents then return
+        if (fileContents == null) return new int[0];
         // -> Cut spaces
         fileContents = fileContents.Replace(" ", "");
         // -> Debug write to console

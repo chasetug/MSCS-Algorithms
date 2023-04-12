@@ -19,7 +19,7 @@ public class Stopwatch
         }
 
         // Output the time difference
-        Console.Write($"Time: {(DateTime.Now - currentTime).Microseconds}us | ");
+        Console.Write($"Time: {(DateTime.Now - currentTime).Microseconds}μs | ");
         // Reset current
         currentTime = DateTime.Now;
     }

@@ -19,7 +19,7 @@ public class Program
         Console.WriteLine($"Algorithm 1: {MSCS.Algorithm_1(pulledArr)}, " +
                           $"Algorithm 2: {MSCS.Algorithm_2(pulledArr)}, " +
                           $"Algorithm 3: {MSCS.MaxSum(pulledArr, 0, 9)}, " +
-                          $"Algorithm 4: {MSCS.Algorithm_4(pulledArr)}");8
+                          $"Algorithm 4: {MSCS.Algorithm_4(pulledArr)}");
     }
 
     public static List<List<int>> GenerateRandomArrays(int lower, int upper)

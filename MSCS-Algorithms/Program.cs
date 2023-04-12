@@ -48,16 +48,31 @@ public class Program
         // Run through each of the random lists
         matrix.ForEach(delegate(List<int> numbers)
         {
-            var alg1Result = MSCS.Algorithm_1(numbers.ToArray());
-            var alg2Result = MSCS.Algorithm_2(numbers.ToArray());
-            var alg3Result = MSCS.MaxSum(numbers.ToArray(), 0, numbers.Count - 1);
-            var alg4Result = MSCS.Algorithm_4(numbers.ToArray());
-            
             Console.WriteLine($"Executing algorithms on {numbers.Count} random numbers");
-            Console.Write($"algorithm-1: {alg1Result}; ");
-            Console.Write($"algorithm-2: {alg2Result}; ");
-            Console.Write($"algorithm-3: {alg3Result}; ");
+            // -> Algorithm 1
+            Stopwatch.MarkTime(true);
+            var alg1Result = MSCS.Algorithm_1(numbers.ToArray());
+            Stopwatch.MarkTime();
+            Console.WriteLine($"algorithm-1: {alg1Result}");
+
+            // -> Algorithm 2
+            Stopwatch.MarkTime(true);
+            var alg2Result = MSCS.Algorithm_2(numbers.ToArray());
+            Stopwatch.MarkTime();
+            Console.WriteLine($"algorithm-2: {alg2Result}");
+
+            // -> Algorithm 3
+            Stopwatch.MarkTime(true);
+            var alg3Result = MSCS.MaxSum(numbers.ToArray(), 0, numbers.Count - 1);
+            Stopwatch.MarkTime();
+            Console.WriteLine($"algorithm-3: {alg3Result}");
+
+            // -> Algorithm 4
+            Stopwatch.MarkTime(true);
+            var alg4Result = MSCS.Algorithm_4(numbers.ToArray());
+            Stopwatch.MarkTime();
             Console.WriteLine($"algorithm-4: {alg4Result}");
+
             Console.WriteLine("----------------------------------------");
         });
     }

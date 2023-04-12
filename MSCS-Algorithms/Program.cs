@@ -4,9 +4,9 @@ namespace MSCS_Algorithms;
 
 public class Program
 {
-    static bool debug = true;
+    static bool debug = false;
 
-    /* TODO - REORGANIZE MAIN
+    /* Driver Method
      * 1. Read file
      * 2. Run each algorithm on the file
      * 3. Print answers in console
@@ -16,38 +16,50 @@ public class Program
      */
     static void Main(string[] args)
     {
+        // Header
+        Console.WriteLine("Maximum Sum Contiguous Subvector Program");
+        Console.WriteLine("----------------------------------------");
+
+        // Store Directory and File Name
+        string dir = Directory.GetCurrentDirectory();
+        string fileName = (OperatingSystem.IsWindows() ? "\\" : "/") + "phw_input.txt";
+        
         // -> Debug write working directory
-        if (debug) Console.WriteLine("Working Directory: " + Directory.GetCurrentDirectory());
-
-        // Pull array from contained file
-        int[] pulledArr = ReadFile(Directory.GetCurrentDirectory() + (OperatingSystem.IsWindows() ? "\\" : "/") + "phw_input.txt");
+        if (debug) Console.WriteLine("Working Directory: " + dir);
+        
+        // Read the array from the file
+        int[] fileArr = ReadFile(dir + fileName);
+        
         // -> Debug write the second value to ensure that the array pulled successfully
-        if (debug) Console.WriteLine(pulledArr[1]);
-
+        if (debug) Console.WriteLine(fileArr[1]);
+        
         // Print out the results for the phw_input.txt
-        Console.WriteLine($"Algorithm 1: {MSCS.Algorithm_1(pulledArr)}, " +
-                          $"Algorithm 2: {MSCS.Algorithm_2(pulledArr)}, " +
-                          $"Algorithm 3: {MSCS.MaxSum(pulledArr, 0, 9)}, " +
-                          $"Algorithm 4: {MSCS.Algorithm_4(pulledArr)}");
+        Console.WriteLine($"Executing algorithms on file ${fileName}");
+        Console.WriteLine($"algorithm-1: {MSCS.Algorithm_1(fileArr)}; " +
+                          $"algorithm-2: {MSCS.Algorithm_2(fileArr)}; " +
+                          $"algorithm-3: {MSCS.MaxSum(fileArr, 0, 9)}; " +
+                          $"algorithm-4: {MSCS.Algorithm_4(fileArr)}");
+        
+        Console.WriteLine("----------------------------------------");
 
-        var matrix = GenerateRandomArrays(-100, 100);
+        // Create the matrix of random elements
+        List<List<int>> matrix = GenerateRandomArrays(-100, 100);
+        
+        // Run through each of the random lists
         matrix.ForEach(delegate(List<int> numbers)
         {
-            List<int> results = new();
-            results.Add(MSCS.Algorithm_1(numbers.ToArray()));
-            results.Add(MSCS.Algorithm_2(numbers.ToArray()));
-            results.Add(MSCS.MaxSum(numbers.ToArray(), 0, numbers.Count - 1));
-            results.Add(MSCS.Algorithm_4(numbers.ToArray()));
+            var alg1Result = MSCS.Algorithm_1(numbers.ToArray());
+            var alg2Result = MSCS.Algorithm_2(numbers.ToArray());
+            var alg3Result = MSCS.MaxSum(numbers.ToArray(), 0, numbers.Count - 1);
+            var alg4Result = MSCS.Algorithm_4(numbers.ToArray());
             
-            Console.WriteLine($"Case {numbers.Count}: " +
-                              $"Algorithm 1: {results[0]}, " +
-                              $"Algorithm 2: {results[1]}, " +
-                              $"Algorithm 3: {results[2]}, " +
-                              $"Algorithm 4: {results[3]} " +
-                              $"Correct: {results.Distinct().Count() == 1}");
+            Console.WriteLine($"Executing algorithms on {numbers.Count} random numbers");
+            Console.Write($"algorithm-1: {alg1Result}; ");
+            Console.Write($"algorithm-2: {alg2Result}; ");
+            Console.Write($"algorithm-3: {alg3Result}; ");
+            Console.WriteLine($"algorithm-4: {alg4Result}");
+            Console.WriteLine("----------------------------------------");
         });
-        
-        // TODO: Add times
     }
 
     // Creates random lists of integers of size 10, 15, 20, ... 95, 100

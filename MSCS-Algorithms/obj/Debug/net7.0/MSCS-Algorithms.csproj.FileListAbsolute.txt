@@ -13,21 +13,24 @@
 /Users/chasetug/Code/RiderProjects/MSCS Algorithms/Solution1/MSCS-Algorithms/obj/Debug/net7.0/MSCS-Algorithms.pdb
 /Users/chasetug/Code/RiderProjects/MSCS Algorithms/Solution1/MSCS-Algorithms/obj/Debug/net7.0/MSCS-Algorithms.genruntimeconfig.cache
 /Users/chasetug/Code/RiderProjects/MSCS Algorithms/Solution1/MSCS-Algorithms/obj/Debug/net7.0/ref/MSCS-Algorithms.dll
-C:\Users\send2\Source\Repos\MSCS-Algorithms\MSCS-Algorithms\bin\Debug\net7.0\MSCS-Algorithms.exe
-C:\Users\send2\Source\Repos\MSCS-Algorithms\MSCS-Algorithms\bin\Debug\net7.0\MSCS-Algorithms.dll.config
-C:\Users\send2\Source\Repos\MSCS-Algorithms\MSCS-Algorithms\bin\Debug\net7.0\MSCS-Algorithms.deps.json
-C:\Users\send2\Source\Repos\MSCS-Algorithms\MSCS-Algorithms\bin\Debug\net7.0\MSCS-Algorithms.runtimeconfig.json
-C:\Users\send2\Source\Repos\MSCS-Algorithms\MSCS-Algorithms\bin\Debug\net7.0\MSCS-Algorithms.dll
-C:\Users\send2\Source\Repos\MSCS-Algorithms\MSCS-Algorithms\bin\Debug\net7.0\MSCS-Algorithms.pdb
-C:\Users\send2\Source\Repos\MSCS-Algorithms\MSCS-Algorithms\obj\Debug\net7.0\MSCS-Algorithms.csproj.AssemblyReference.cache
-C:\Users\send2\Source\Repos\MSCS-Algorithms\MSCS-Algorithms\obj\Debug\net7.0\MSCS-Algorithms.csproj.SuggestedBindingRedirects.cache
-C:\Users\send2\Source\Repos\MSCS-Algorithms\MSCS-Algorithms\obj\Debug\net7.0\MSCS-Algorithms.dll.config
-C:\Users\send2\Source\Repos\MSCS-Algorithms\MSCS-Algorithms\obj\Debug\net7.0\MSCS-Algorithms.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\send2\Source\Repos\MSCS-Algorithms\MSCS-Algorithms\obj\Debug\net7.0\MSCS-Algorithms.AssemblyInfoInputs.cache
-C:\Users\send2\Source\Repos\MSCS-Algorithms\MSCS-Algorithms\obj\Debug\net7.0\MSCS-Algorithms.AssemblyInfo.cs
-C:\Users\send2\Source\Repos\MSCS-Algorithms\MSCS-Algorithms\obj\Debug\net7.0\MSCS-Algorithms.csproj.CoreCompileInputs.cache
-C:\Users\send2\Source\Repos\MSCS-Algorithms\MSCS-Algorithms\obj\Debug\net7.0\MSCS-Algorithms.dll
-C:\Users\send2\Source\Repos\MSCS-Algorithms\MSCS-Algorithms\obj\Debug\net7.0\refint\MSCS-Algorithms.dll
-C:\Users\send2\Source\Repos\MSCS-Algorithms\MSCS-Algorithms\obj\Debug\net7.0\MSCS-Algorithms.pdb
-C:\Users\send2\Source\Repos\MSCS-Algorithms\MSCS-Algorithms\obj\Debug\net7.0\MSCS-Algorithms.genruntimeconfig.cache
-C:\Users\send2\Source\Repos\MSCS-Algorithms\MSCS-Algorithms\obj\Debug\net7.0\ref\MSCS-Algorithms.dll
+C:/Users/send2/Source/Repos/MSCS-Algorithms/MSCS-Algorithms/bin/Debug/net7.0/MSCS-Algorithms.exe
+C:/Users/send2/Source/Repos/MSCS-Algorithms/MSCS-Algorithms/bin/Debug/net7.0/MSCS-Algorithms.dll.config
+C:/Users/send2/Source/Repos/MSCS-Algorithms/MSCS-Algorithms/bin/Debug/net7.0/MSCS-Algorithms.deps.json
+C:/Users/send2/Source/Repos/MSCS-Algorithms/MSCS-Algorithms/bin/Debug/net7.0/MSCS-Algorithms.runtimeconfig.json
+C:/Users/send2/Source/Repos/MSCS-Algorithms/MSCS-Algorithms/bin/Debug/net7.0/MSCS-Algorithms.dll
+C:/Users/send2/Source/Repos/MSCS-Algorithms/MSCS-Algorithms/bin/Debug/net7.0/MSCS-Algorithms.pdb
+C:/Users/send2/Source/Repos/MSCS-Algorithms/MSCS-Algorithms/obj/Debug/net7.0/MSCS-Algorithms.csproj.AssemblyReference.cache
+C:/Users/send2/Source/Repos/MSCS-Algorithms/MSCS-Algorithms/obj/Debug/net7.0/MSCS-Algorithms.csproj.SuggestedBindingRedirects.cache
+C:/Users/send2/Source/Repos/MSCS-Algorithms/MSCS-Algorithms/obj/Debug/net7.0/MSCS-Algorithms.dll.config
+C:/Users/send2/Source/Repos/MSCS-Algorithms/MSCS-Algorithms/obj/Debug/net7.0/MSCS-Algorithms.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/send2/Source/Repos/MSCS-Algorithms/MSCS-Algorithms/obj/Debug/net7.0/MSCS-Algorithms.AssemblyInfoInputs.cache
+C:/Users/send2/Source/Repos/MSCS-Algorithms/MSCS-Algorithms/obj/Debug/net7.0/MSCS-Algorithms.AssemblyInfo.cs
+C:/Users/send2/Source/Repos/MSCS-Algorithms/MSCS-Algorithms/obj/Debug/net7.0/MSCS-Algorithms.csproj.CoreCompileInputs.cache
+C:/Users/send2/Source/Repos/MSCS-Algorithms/MSCS-Algorithms/obj/Debug/net7.0/MSCS-Algorithms.dll
+C:/Users/send2/Source/Repos/MSCS-Algorithms/MSCS-Algorithms/obj/Debug/net7.0/refint/MSCS-Algorithms.dll
+C:/Users/send2/Source/Repos/MSCS-Algorithms/MSCS-Algorithms/obj/Debug/net7.0/MSCS-Algorithms.pdb
+C:/Users/send2/Source/Repos/MSCS-Algorithms/MSCS-Algorithms/obj/Debug/net7.0/MSCS-Algorithms.genruntimeconfig.cache
+C:/Users/send2/Source/Repos/MSCS-Algorithms/MSCS-Algorithms/obj/Debug/net7.0/ref/MSCS-Algorithms.dll
+/Users/chasetug/Code/RiderProjects/MSCS Algorithms/Solution1/MSCS-Algorithms/bin/Debug/net7.0/MSCS-Algorithms.dll.config
+/Users/chasetug/Code/RiderProjects/MSCS Algorithms/Solution1/MSCS-Algorithms/obj/Debug/net7.0/MSCS-Algorithms.csproj.SuggestedBindingRedirects.cache
+/Users/chasetug/Code/RiderProjects/MSCS Algorithms/Solution1/MSCS-Algorithms/obj/Debug/net7.0/MSCS-Algorithms.dll.config

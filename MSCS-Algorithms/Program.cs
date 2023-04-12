@@ -16,10 +16,10 @@ public class Program
         // -> Debug write the second value to ensure that the array pulled successfully
         if (debug) Console.WriteLine(pulledArr[1]);
 
-        Console.WriteLine(MSCS.Algorithm_1(pulledArr));
-        Console.WriteLine(MSCS.Algorithm_2(pulledArr));
-        Console.WriteLine(MSCS.MaxSum(pulledArr, 0, 9));
-        Console.WriteLine(MSCS.Algorithm_4(pulledArr));
+        Console.WriteLine($"Algorithm 1: {MSCS.Algorithm_1(pulledArr)}, " +
+                          $"Algorithm 2: {MSCS.Algorithm_2(pulledArr)}, " +
+                          $"Algorithm 3: {MSCS.MaxSum(pulledArr, 0, 9)}, " +
+                          $"Algorithm 4: {MSCS.Algorithm_4(pulledArr)}");8
     }
 
     public static List<List<int>> GenerateRandomArrays(int lower, int upper)

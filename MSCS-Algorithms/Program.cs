@@ -20,6 +20,15 @@ public class Program
                           $"Algorithm 2: {MSCS.Algorithm_2(pulledArr)}, " +
                           $"Algorithm 3: {MSCS.MaxSum(pulledArr, 0, 9)}, " +
                           $"Algorithm 4: {MSCS.Algorithm_4(pulledArr)}");
+
+        var matrix = GenerateRandomArrays(-100, 100);
+        matrix.ForEach(delegate(List<int> lists)
+        {
+            Console.WriteLine($"Algorithm 1: {MSCS.Algorithm_1(lists.ToArray())}, " +
+                              $"Algorithm 2: {MSCS.Algorithm_2(lists.ToArray())}, " +
+                              $"Algorithm 3: {MSCS.MaxSum(lists.ToArray(), 0, 9)}, " +
+                              $"Algorithm 4: {MSCS.Algorithm_4(lists.ToArray())}");
+        });
     }
 
     public static List<List<int>> GenerateRandomArrays(int lower, int upper)

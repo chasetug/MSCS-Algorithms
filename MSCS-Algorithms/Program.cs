@@ -6,6 +6,14 @@ public class Program
 {
     static bool debug = true;
 
+    /* TODO - REORGANIZE MAIN
+     * 1. Read file
+     * 2. Run each algorithm on the file
+     * 3. Print answers in console
+     * 4. Generate random lists
+     * 5. Use System clock to measure how long each algorithm takes on each of the 19 lists
+     * 6. Print results
+     */
     static void Main(string[] args)
     {
         // -> Debug write working directory
@@ -38,9 +46,11 @@ public class Program
                               $"Algorithm 4: {results[3]} " +
                               $"Correct: {results.Distinct().Count() == 1}");
         });
+        
+        // TODO: Add times
     }
 
-    // Creates 20 random lists of integers of size 10, 15, 20, ... 95, 100
+    // Creates random lists of integers of size 10, 15, 20, ... 95, 100
     public static List<List<int>> GenerateRandomArrays(int lower, int upper)
     {
         // Initialize the matrix

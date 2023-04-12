@@ -2,20 +2,7 @@ namespace MSCS_Algorithms;
 
 public class MSCS
 {
-    private List<int> _debugList = new()
-    {
-        7,
-        -8,
-        5,
-        -3,
-        -4,
-        11,
-        3,
-        4,
-        5,
-        9,
-        0
-    };
+    private List<int> _debugList = new() { 7, -8, 5, -3, -4, 11, 3, 4, 5, 9, 0 };
     
     // Algorithm-1(X:array[P..Q] of integer)
     public static int Algorithm_1(int[] X)

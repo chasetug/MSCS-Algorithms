@@ -4,7 +4,7 @@ namespace MSCS_Algorithms;
 
 public class Program
 {
-    static bool debug = false;
+    static bool _debug = false;
 
     /* Driver Method
      * 1. Read file
@@ -25,13 +25,13 @@ public class Program
         string fileName = (OperatingSystem.IsWindows() ? "\\" : "/") + "phw_input.txt";
         
         // -> Debug write working directory
-        if (debug) Console.WriteLine("Working Directory: " + dir);
+        if (_debug) Console.WriteLine("Working Directory: " + dir);
         
         // Read the array from the file
         int[] fileArr = ReadFile(dir + fileName);
         
         // -> Debug write the second value to ensure that the array pulled successfully
-        if (debug) Console.WriteLine(fileArr[1]);
+        if (_debug) Console.WriteLine(fileArr[1]);
         
         // Print out the results for the phw_input.txt
         Console.WriteLine($"Executing algorithms on file ${fileName}");
@@ -111,13 +111,13 @@ public class Program
         // Open up the file defined by path
         StreamReader sr = new(path);
         // Pull contents and cut spaces
-        string fileContents = sr.ReadLine();
+        string fileContents = sr.ReadLine() ?? String.Empty;
         // -> If there are no contents then return
-        if (fileContents == null) return new int[0];
+        if (fileContents == String.Empty) return new int[0];
         // -> Cut spaces
         fileContents = fileContents.Replace(" ", "");
         // -> Debug write to console
-        if (debug) Console.WriteLine(fileContents);
+        if (_debug) Console.WriteLine(fileContents);
 
         // Create the return array
         int[] rArr = new int[10];
@@ -154,7 +154,7 @@ public class Program
             }
 
             // -> Debug out both strings
-            if (debug) Console.WriteLine($"PS: {parseString} || FC: {fileContents}");
+            if (_debug) Console.WriteLine($"PS: {parseString} || FC: {fileContents}");
 
             // -> Increment oVal
             oVal++;
@@ -167,7 +167,7 @@ public class Program
         sr.Close();
 
         // -> Debug out rArr
-        if (debug)
+        if (_debug)
         {
             Console.Write("| ");
             for (int i = 0; i < rArr.Length; i++)

@@ -19,16 +19,17 @@ public class Program
         // Header
         Console.WriteLine("Maximum Sum Contiguous Subvector Program");
         Console.WriteLine($"Current Time:  {DateTime.Now}");
+        
+        // Display the working directory
+        string dir = Directory.GetCurrentDirectory();
+        Console.WriteLine("Working Directory: " + dir);
+
         Console.WriteLine("----------------------------------------");
 
         // Store Directory and File Name
-        string dir = Directory.GetCurrentDirectory();
         string fileName = (OperatingSystem.IsWindows() ? "\\" : "/") + "phw_input.txt";
         string outFileName = (OperatingSystem.IsWindows() ? "\\" : "/") + "chaseluke_phw_output.txt";
-
-        // -> Debug write working directory
-        if (_debug) Console.WriteLine("Working Directory: " + dir);
-        
+                
         // Read the array from the file
         int[] fileArr = ReadFile(dir + fileName);
         

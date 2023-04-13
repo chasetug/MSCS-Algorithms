@@ -13,6 +13,7 @@ public class Program
      * 4. Generate random lists
      * 5. Use System clock to measure how long each algorithm takes on each of the 19 lists
      * 6. Print results
+     * 7. Write to file
      */
     static void Main(string[] args)
     {
@@ -57,7 +58,7 @@ public class Program
         // Define a stream reader to output data
         StreamWriter sw = new StreamWriter(F);
         // -> Write headers
-        if (sw != null) sw.WriteLine("algorithm-1,algorithm-2,algorithm-3,algorithm-4,T1(n),T2(n),T3(n),T4(n)");
+        sw?.WriteLine("algorithm-1,algorithm-2,algorithm-3,algorithm-4,T1(n),T2(n),T3(n),T4(n)");
 
         // Run through each of the random lists
         matrix.ForEach(delegate(List<int> numbers)
@@ -90,16 +91,16 @@ public class Program
             Console.WriteLine("----------------------------------------");
 
             // Write saved information to output file
-            if (sw != null) sw.WriteLine($"{alg1Result},{alg2Result},{alg3Result},{alg4Result},{alg1Time},{alg2Time},{alg3Time},{alg4Time}");
+            sw?.WriteLine($"{alg1Result},{alg2Result},{alg3Result},{alg4Result},{alg1Time},{alg2Time},{alg3Time},{alg4Time}");
         });
-
+        
         // Close stream writer
-        if(sw != null) sw.Close();
-        if (F != null) F.Close();
+        sw?.Close();
+        F.Close();
     }
 
     // Creates random lists of integers of size 10, 15, 20, ... 95, 100
-    public static List<List<int>> GenerateRandomArrays(int lower, int upper)
+    private static List<List<int>> GenerateRandomArrays(int lower, int upper)
     {
         // Initialize the matrix
         List<List<int>> matrix = new();
@@ -127,7 +128,7 @@ public class Program
     // We will be reading a file named "phw_input.txt"
     // -> File is comma delimited
     // -> Will always be of length 10
-    public static int[] ReadFile(string path)
+    private static int[] ReadFile(string path)
     {
         // If the stream reader is null, return early and notify user
         if (!File.Exists(path))

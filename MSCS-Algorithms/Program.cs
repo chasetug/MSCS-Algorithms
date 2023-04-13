@@ -50,7 +50,7 @@ public class Program
         Console.WriteLine("----------------------------------------");
 
         // Create the matrix of random elements
-        List<List<int>> matrix = GenerateRandomArrays(-100, 100);
+        List<List<int>> matrix = GenerateRandomArrays(Int16.MinValue, Int16.MaxValue);
 
         // Creates/overrides output file
         FileStream F = new FileStream(dir + outFileName, FileMode.Create);

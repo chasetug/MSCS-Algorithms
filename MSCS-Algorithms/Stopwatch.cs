@@ -9,18 +9,22 @@ public class Stopwatch
     
     // Marks the current time
     // -> Outputs the time difference if reset is false
-    public static void MarkTime(bool reset = false)
+    public static string MarkTime(bool reset = false)
     {
         // -> If reset is true, set current time and return
         if (reset)
         {
             _currentTime = DateTime.Now;
-            return;
+            return string.Empty;
         }
 
         // Output the time difference
-        Console.Write($"Time: {(DateTime.Now - _currentTime).Microseconds}μs | ");
+        TimeSpan timeDiff = DateTime.Now - _currentTime;
+        Console.Write($"Time: {timeDiff.Microseconds}μs | ");
         // Reset current
         _currentTime = DateTime.Now;
+
+        // Return string of time difference in microseconds
+        return timeDiff.Microseconds.ToString();
     }
 }

@@ -23,7 +23,8 @@ public class Program
         // Store Directory and File Name
         string dir = Directory.GetCurrentDirectory();
         string fileName = (OperatingSystem.IsWindows() ? "\\" : "/") + "phw_input.txt";
-        
+        string outFileName = (OperatingSystem.IsWindows() ? "\\" : "/") + "chaseluke_phw_output.txt";
+
         // -> Debug write working directory
         if (_debug) Console.WriteLine("Working Directory: " + dir);
         
@@ -44,7 +45,15 @@ public class Program
 
         // Create the matrix of random elements
         List<List<int>> matrix = GenerateRandomArrays(-100, 100);
-        
+
+        // Creates/overrides output file
+        FileStream F = new FileStream(dir + outFileName, FileMode.Create);
+
+        // Define a stream reader to output data
+        StreamWriter sw = new StreamWriter(F);
+        // -> Write headers
+        if (sw != null) sw.WriteLine("algorithm-1,algorithm-2,algorithm-3,algorithm-4,T1(n),T2(n),T3(n),T4(n)");
+
         // Run through each of the random lists
         matrix.ForEach(delegate(List<int> numbers)
         {
@@ -52,29 +61,36 @@ public class Program
             // -> Algorithm 1
             Stopwatch.MarkTime(true);
             var alg1Result = MSCS.Algorithm_1(numbers.ToArray());
-            Stopwatch.MarkTime();
+            string alg1Time = Stopwatch.MarkTime();
             Console.WriteLine($"algorithm-1: {alg1Result}");
 
             // -> Algorithm 2
             Stopwatch.MarkTime(true);
             var alg2Result = MSCS.Algorithm_2(numbers.ToArray());
-            Stopwatch.MarkTime();
+            string alg2Time = Stopwatch.MarkTime();
             Console.WriteLine($"algorithm-2: {alg2Result}");
 
             // -> Algorithm 3
             Stopwatch.MarkTime(true);
             var alg3Result = MSCS.MaxSum(numbers.ToArray(), 0, numbers.Count - 1);
-            Stopwatch.MarkTime();
+            string alg3Time = Stopwatch.MarkTime();
             Console.WriteLine($"algorithm-3: {alg3Result}");
 
             // -> Algorithm 4
             Stopwatch.MarkTime(true);
             var alg4Result = MSCS.Algorithm_4(numbers.ToArray());
-            Stopwatch.MarkTime();
+            string alg4Time = Stopwatch.MarkTime();
             Console.WriteLine($"algorithm-4: {alg4Result}");
 
             Console.WriteLine("----------------------------------------");
+
+            // Write saved information to output file
+            if (sw != null) sw.WriteLine($"{alg1Result},{alg2Result},{alg3Result},{alg4Result},{alg1Time},{alg2Time},{alg3Time},{alg4Time}");
         });
+
+        // Close stream writer
+        if(sw != null) sw.Close();
+        if (F != null) F.Close();
     }
 
     // Creates random lists of integers of size 10, 15, 20, ... 95, 100

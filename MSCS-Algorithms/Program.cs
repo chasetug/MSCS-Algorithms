@@ -32,7 +32,11 @@ public class Program
                 
         // Read the array from the file
         int[] fileArr = ReadFile(dir + fileName);
-        
+
+        // -> Ensure that the file is longer than 0
+        if (fileArr.Length == 0)
+            return;
+
         // -> Debug write the second value to ensure that the array pulled successfully
         if (_debug) Console.WriteLine(fileArr[1]);
         
@@ -125,8 +129,16 @@ public class Program
     // -> Will always be of length 10
     public static int[] ReadFile(string path)
     {
+        // If the stream reader is null, return early and notify user
+        if (!File.Exists(path))
+        {
+            Console.WriteLine($"Could not find a file at path {path}");
+            return new int[0];
+        }
+
         // Open up the file defined by path
         StreamReader sr = new(path);
+
         // Pull contents and cut spaces
         string fileContents = sr.ReadLine() ?? String.Empty;
         // -> If there are no contents then return

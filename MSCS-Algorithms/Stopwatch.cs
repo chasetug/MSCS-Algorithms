@@ -20,11 +20,11 @@ public static class Stopwatch
 
         // Output the time difference
         TimeSpan timeDiff = DateTime.Now - _currentTime;
-        Console.Write($"Time: {timeDiff.Microseconds}μs | ");
+        Console.Write($"Time: {timeDiff.Ticks/10f}μs | ");
         // Reset current
         _currentTime = DateTime.Now;
 
         // Return string of time difference in microseconds
-        return timeDiff.Microseconds.ToString();
+        return (timeDiff.Ticks / 10f).ToString();
     }
 }

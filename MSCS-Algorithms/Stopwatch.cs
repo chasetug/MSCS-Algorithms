@@ -2,7 +2,7 @@
 
 namespace MSCS_Algorithms;
 
-public class Stopwatch
+public static class Stopwatch
 {
     // Sets up current time, pushes in current time
     static DateTime _currentTime;

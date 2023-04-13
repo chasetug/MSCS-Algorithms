@@ -18,6 +18,7 @@ public class Program
     {
         // Header
         Console.WriteLine("Maximum Sum Contiguous Subvector Program");
+        Console.WriteLine($"Current Time:  {DateTime.Now}");
         Console.WriteLine("----------------------------------------");
 
         // Store Directory and File Name
@@ -40,7 +41,6 @@ public class Program
                           $"algorithm-2: {MSCS.Algorithm_2(fileArr)}; " +
                           $"algorithm-3: {MSCS.MaxSum(fileArr, 0, 9)}; " +
                           $"algorithm-4: {MSCS.Algorithm_4(fileArr)}");
-        
         Console.WriteLine("----------------------------------------");
 
         // Create the matrix of random elements

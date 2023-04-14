@@ -63,6 +63,9 @@ public class Program
         // Run through each of the random lists
         matrix.ForEach(delegate(List<int> numbers)
         {
+            // -> Store length of current list
+            int numLength = numbers.Count;
+
             Console.WriteLine($"Executing algorithms on {numbers.Count} random numbers");
             // -> Algorithm 1
             Stopwatch.MarkTime(true);
@@ -78,7 +81,7 @@ public class Program
 
             // -> Algorithm 3
             Stopwatch.MarkTime(true);
-            var alg3Result = MSCS.MaxSum(numbers.ToArray(), 0, numbers.Count - 1);
+            var alg3Result = MSCS.MaxSum(numbers.ToArray(), 0, numLength - 1);
             string alg3Time = Stopwatch.MarkTime();
             Console.WriteLine($"algorithm-3: {alg3Result}");
 
@@ -91,7 +94,11 @@ public class Program
             Console.WriteLine("----------------------------------------");
 
             // Write saved information to output file
-            sw?.WriteLine($"{alg1Result},{alg2Result},{alg3Result},{alg4Result},{alg1Time},{alg2Time},{alg3Time},{alg4Time}");
+            sw?.WriteLine($"{alg1Time},{alg2Time},{alg3Time},{alg4Time}," +
+                $"{(1/24f) * (numLength * (3 * numLength * ((23 * numLength) + 34) + 199) + 134)}," +
+                $"{(1/6f) * ((25 * numLength * numLength) + (54 * numLength) + 35)}," +
+                $"{(12 * numLength) + 34}," +
+                $"{numLength}");
         });
         
         // Close stream writer

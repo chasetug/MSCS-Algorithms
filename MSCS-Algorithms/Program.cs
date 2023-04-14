@@ -95,10 +95,11 @@ public class Program
 
             // Write saved information to output file
             sw?.WriteLine($"{alg1Time},{alg2Time},{alg3Time},{alg4Time}," +
-                $"{(1/24f) * (numLength * (3 * numLength * ((23 * numLength) + 34) + 199) + 134)}," +
-                $"{(1/6f) * ((25 * numLength * numLength) + (54 * numLength) + 35)}," +
-                $"{(12 * numLength) + 34}," +
-                $"{numLength}");
+                $"{((1/24f) * (numLength * (3 * numLength * ((23 * numLength) + 34) + 199) + 134)) * 0.0001}," +
+                $"{((1/6f) * ((25 * numLength * numLength) + (54 * numLength) + 35)) * 0.0005}," +
+                $"{((12 * numLength) + 34) * 0.005}," +
+                $"{numLength * 0.01}");
+                
         });
         
         // Close stream writer
